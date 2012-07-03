@@ -51,11 +51,15 @@ Cron::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
   # ActionMailer Config
-  #config.action_mailer.default_url_options = { :host => 'www.carsshop.cz' }
-  config.action_mailer.delivery_method = :sendmail
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default :charset => "utf-8"
+  ActionMailer::Base.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "webingart.cz",
+      :user_name            => "dev@webingart.cz",
+      :password             => "stodolni",
+      :authentication       => "plain",
+      :enable_starttls_auto => true
+  }
 
   # Enable threaded mode
   # config.threadsafe!
