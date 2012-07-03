@@ -54,7 +54,7 @@ set :copy_exclude, ['.git', 'doc', '.rvmrc', 'features', 'spec', 'test']
 # POZOR! Aktualne je to autodetekce vetve, ve ktere se nachazim!
 # Pokud chci natvrdo specifickou vetev, napr. master, pak tam bude:
 # set :branche, "master"
-set :repository,  "git@github.com:webingart/contento.git"
+set :repository,  "git@github.com:webingart/cron.git"
 set :branche, `git branch | grep '*' | awk '{ print $2 }'`.split[0]
 
 # --- tady konci volitelna konfigurace, zbytek neni obvykle treba menit --------
